@@ -12,7 +12,7 @@ def index():
     if TRITON_TOKEN_NAME in request.args:
         token = request.args[TRITON_TOKEN_NAME]
         resp = make_response(render_template('login.html'))
-        resp.set_cookie('triton-check', token)
+        resp.set_cookie(TRITON_TOKEN_NAME, token)
         return resp
     else:
         return render_template('login.html')
@@ -20,7 +20,7 @@ def index():
 
 # change for your needs
 def success_auth(token, res):
-    print(request.cookies.get(TRITON_TOKEN_NAME))
+    print(token)
 
 
 @app.route('/login', methods=['POST'])
