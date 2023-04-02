@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success</title>
+	<style>
+		body {
+			background: linear-gradient(0deg, rgba(255,255,255,0.7), rgba(0, 75, 0, 0.7)), url(http://csc.knu.ua/filer/canonical/1501012402/208/) no-repeat center center fixed;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			background-color: rgba(255, 255, 255, 0.8);
+			font-family: 'Montserrat', sans-serif;
+			color: #333;
+		}
+
+		.container {
+			margin: 50px auto;
+			padding: 20px;
+			max-width: 600px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+
+		h1 {
+			color: #4CAF50;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+
+		.key {
+			font-weight: bold;
+			display: inline-block;
+			min-width: 100px;
+		}
+
+		.value {
+			display: inline-block;
+			word-wrap: break-word;
+			max-width: 400px;
+		}
+
+		.back-button {
+			display: block;
+			margin-top: 20px;
+			text-align: center;
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: all 0.3s ease-in-out;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.back-button:hover {
+			background-color: #fff;
+			color: #4CAF50;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Успішно</h1>
+		<ul>
+			{% for key, value in res[0].items() %}
+				<li><span class="key">{{ key }}:</span> <span class="value">{{ value }}</span></li>
+			{% endfor %}
+		</ul>
+		<a href="/" class="back-button">Назад</a>
+	</div>
+</body>
+</html>

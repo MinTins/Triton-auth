@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Error</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background: linear-gradient(0deg, rgba(255,255,255,0.7), rgba(75, 0, 0, 0.7)), url(http://csc.knu.ua/filer/canonical/1501012402/208/) no-repeat center center fixed;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: white;
+		}
+		h1 {
+			font-size: 4rem;
+			margin-bottom: 1rem;
+		}
+		p {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+		button {
+			font-size: 1.5rem;
+			padding: 1rem 2rem;
+			border: none;
+			border-radius: 5px;
+			background-color: white;
+			color: #ff4d4d;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #ff4d4d;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Помилка</h1>
+		<p>Неправильний логін чи пароль.</p>
+		<button onclick="goBack()">Назад</button>
+	</div>
+	<script>
+		setTimeout(function() {
+			window.location.href = "/";
+		}, 10000);
+
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+</body>
+</html>
